@@ -1,199 +1,216 @@
 body {
-  background-image: url("tactile_noise.png");
-  background-repeat: repeat;
-  min-height: 150vh;
-  overscroll-behavior: none;
-  margin: 0px;
+    background-image: url("tactile_noise.png");
+    background-repeat: repeat;
+    min-height: 150vh;
+    overscroll-behavior: none;
+    margin: 0px;
 }
 
 input[type="file"] {
-  display: none;
+    display: none;
 }
 
 .loadingWrapper {
-  /* border: 3px solid peru; */
-  display: flex;
-  justify-content: center;
+    /* border: 3px solid peru; */
+    display: flex;
+    justify-content: center;
 }
 
 .loadingText {
-  color: white;
-  /* margin-bottom: 130px; */
-  display: none;
-  justify-content: center;
-  margin-top: 0;
-  font-style: italic;
+    color: white;
+    /* margin-bottom: 130px; */
+    display: none;
+    justify-content: center;
+    margin-top: 5px;
+    font-style: italic;
 }
 
 .spacing {
-  margin-bottom: 130px;
+    margin-bottom: 130px;
 }
 
 .custom-file-upload {
-  border: 2px solid #ccc;
-  background-color: #7e1d7fcc;
-  color: white;
-  display: inline-block;
-  padding: 6px 12px;
-  cursor: pointer;
-  border-radius: 5px;
-  font-family: Arial, Helvetica, sans-serif;
-  /* margin-bottom: 150px; */
+    background-color: #acacaccc;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    /* margin-bottom: 150px; */
+}
+
+.getFileButton {
+    background-color: #57ff68cc;
+    color: black;
+    display: inline-block;
+    padding: 6px 12px;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .custom-file-upload:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
-.mainImg {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  margin-top: 15%;
+h1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 15%;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 3px;
+    font-size: 3em;
 }
 
 .formDiv {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
 }
 
 form * {
-  text-align: center;
-  margin: auto;
+    text-align: center;
+    margin: auto;
 }
 
 .navBar {
-  display: block;
-  height: 40px;
-  line-height: 40px;
-  background-color: #333;
-  border-radius: 4px;
-  box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    background-color: #333;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -1px rgba(0, 0, 0, 0.055);
 }
 
 .navBar .home {
-  float: left;
-  color: #f2f2f2;
-  background-color: black;
-  text-align: center;
-  padding-left: 14px;
-  padding-right: 14px;
-  text-decoration: none;
-  font-size: 17px;
-  font-family: Arial, Helvetica, sans-serif;
-  border-radius: 5px;
+    float: left;
+    color: #f2f2f2;
+    background-color: black;
+    text-align: center;
+    padding-left: 14px;
+    padding-right: 14px;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 5px;
 }
 
 .navBar .home:hover {
-  background-color: grey;
-  border-radius: 5px;
+    background-color: grey;
+    border-radius: 5px;
 }
 
 .navBar .fa {
-  padding-top: 10px;
-  font-size: 20px;
-  width: 40px;
-  height: 30px;
-  text-align: center;
-  text-decoration: none;
-  float: right;
+    padding-top: 10px;
+    font-size: 20px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+    text-decoration: none;
+    float: right;
 }
 
 .navBar .fa:hover {
-  opacity: 0.7;
+    opacity: 0.7;
 }
 
 .fa-twitter {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
 
 .fa-reddit {
-  background: black;
-  color: white;
+    background: black;
+    color: white;
 }
 
 .fa-linkedin {
-  background: black;
-  color: white;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+    background: black;
+    color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .accordionWrapper {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .accordion {
-  background-color: #333333;
-  color: white;
-  cursor: pointer;
-  /* padding: 18px; */
-  width: 500px;
-  /* min-width: 55vh; */
-  height: 8vh;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  text-align: center;
-  position: relative;
-  border: 1px solid black;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
+    background-color: #333333;
+    color: white;
+    cursor: pointer;
+    /* padding: 18px; */
+    width: 500px;
+    /* min-width: 55vh; */
+    height: 8vh;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+    text-align: center;
+    position: relative;
+    border: 1px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
 }
 
 .active,
 .accordion:hover {
-  background-color: black;
+    background-color: black;
 }
 
 .accordion:after {
-  content: "\002B";
-  color: #777;
-  font-weight: bold;
-  float: right;
-  margin-left: 5px;
+    content: "\002B";
+    color: #777;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
 }
 
 .active:after {
-  content: "\2212";
+    content: "\2212";
 }
 
 .panel {
-  position: absolute;
-  padding: 0 18px;
-  background-color: white;
-  max-height: 0;
-  width: 500px;
-  overflow: hidden;
-  transition: max-height 0.2s ease-out;
-  box-sizing: border-box;
-  margin-left: 10px;
-  margin-right: 10px;
-  border-radius: 5px;
-  opacity: 0.7;
+    position: absolute;
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    width: 500px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    opacity: 0.7;
 }
 
 .loading {
-  border: 10px solid grey;
-  border-top: 10px solid blue;
-  border-bottom: 10px solid purple;
-  border-radius: 50%;
-  animation: spin 0.5s linear infinite;
-  display: none;
+    margin-left: 5px;
+    border: 10px solid grey;
+    border-top: 10px solid blue;
+    border-bottom: 10px solid purple;
+    border-radius: 50%;
+    animation: spin 0.5s linear infinite;
+    display: none;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }

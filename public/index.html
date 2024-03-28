@@ -1,91 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>SoundSqueezr</title>
-    <script src="/scripts/ffmpeg/dist/ffmpeg.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-  </head>
-  <body>
-    <nav class="navBar">
-      <a class="home" href="/">Sound <b>Squeezr</b></a>
-      <a href="https://twitter.com/intent/tweet" class="fa fa-twitter"></a>
-      <a href="https://www.reddit.com/submit" class="fa fa-reddit"></a>
-      <a
-        href="https://www.linkedin.com/in/ira-hudgin"
-        class="fa fa-linkedin"
-      ></a>
-    </nav>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>SoundSqueezr</title>
+        <script src="/scripts/ffmpeg/dist/umd/ffmpeg.js"></script>
+        <script src="/scripts/util/dist/umd/index.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+    </head>
+    <body>
+        <nav class="navBar">
+            <a class="home" href="/">Sound <b>Squeezr</b></a>
+            <a
+                href="https://twitter.com/intent/tweet"
+                class="fa fa-twitter"
+            ></a>
+            <a href="https://www.reddit.com/submit" class="fa fa-reddit"></a>
+            <a
+                href="https://www.linkedin.com/in/ira-hudgin"
+                class="fa fa-linkedin"
+            ></a>
+        </nav>
 
-    <img src="speakers.png" class="mainImg" />
-    <div class="loadingWrapper">
-      <div class="formDiv">
-        <label for="myFile" class="custom-file-upload">
-          Upload Movie File Here
-        </label>
-        <input type="file" id="myFile" name="filename" />
-        <div class="loading" id="loading"></div>
-      </div>
-    </div>
-    <p class="loadingText" id="loadingText">
-      ...Modifying audio, check back in a few minutes...
-    </p>
-    <div class="spacing"></div>
-    <div class="accordionWrapper">
-      <div>
-        <button class="accordion">About / READme</button>
-        <div class="panel">
-          <p>https://github.com/irahudgin/DynamicRangeApp</p>
-          <p>
-            Sound Squeezr uses the FFmpeg WASM port, to take an inputted media
-            file and compress the dynamic range of the audio for better
-            listening on lower quality speakers or for specific listening
-            environments. All adjustments to the inputted file are done
-            client-side, rather than passing large media files through to a
-            server, resulting in reduced server load and faster retrieval time
-            for the outputted file. The client-side aspect also ensures the
-            security and integrity of your file as all modifications to the file
-            are done right in the browser, and no information is transmitted
-            across the internet. The end result is the original file, and a
-            duplicate media file with "out_" prepended to indicate the modified
-            file.
-            <b>cap for file size at 2gb</b>. Future tweaks will be added to
-            include more features and improve functionality.
-          </p>
+        <h1>Sound Squeezr</h1>
+        <div class="loadingWrapper">
+            <div class="formDiv">
+                <label for="myFile" class="custom-file-upload">
+                    Upload Movie File Here
+                </label>
+                <input type="file" id="myFile" name="filename" />
+                <div class="loading" id="loading"></div>
+            </div>
         </div>
-      </div>
-      <div>
-        <button class="accordion">Contact + Feedback</button>
-        <div class="panel">
-          <p>soundsqueezr@gmail.com</p>
-          <p>https://github.com/irahudgin\</p>
+        <p class="loadingText" id="loadingText">
+            Modifying the audio of your movie file. Est time :
+        </p>
+        <div class="spacing"></div>
+        <div class="accordionWrapper">
+            <div>
+                <button class="accordion">About / READme</button>
+                <div class="panel">
+                    <p>https://github.com/irahudgin/DynamicRangeApp</p>
+                    <p>
+                        Sound Squeezr uses the FFmpeg WASM port, to take an
+                        inputted media file and compress the dynamic range of
+                        the audio for better listening on lower quality speakers
+                        or for specific listening environments. All adjustments
+                        to the inputted file are done client-side, rather than
+                        passing large media files through to a server, resulting
+                        in reduced server load and faster retrieval time for the
+                        outputted file. The client-side aspect also ensures the
+                        security and integrity of your file as all modifications
+                        to the file are done right in the browser, and no
+                        information is transmitted across the internet. The end
+                        result is the original file, and a duplicate media file
+                        with "out_" prepended to indicate the modified file.
+                        <b>cap for file size at 2gb</b>. Future tweaks will be
+                        added to include more features and improve
+                        functionality.
+                    </p>
+                </div>
+            </div>
+            <div>
+                <button class="accordion">Contact + Feedback</button>
+                <div class="panel">
+                    <p>soundsqueezr@gmail.com</p>
+                    <p>https://github.com/irahudgin\</p>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-    <script src="/javas/dyRange.js"></script>
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
+        <script src="/javas/dyRange.js"></script>
+        <script>
+            var acc = document.getElementsByClassName("accordion");
+            var i;
 
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-            // panel.style.display = hidden;
-          } else {
-            // panel.style.display = block;
-            panel.style.maxHeight = panel.scrollHeight + "px";
-          }
-        });
-      }
-    </script>
-  </body>
+            for (i = 0; i < acc.length; i++) {
+                acc[i].addEventListener("click", function () {
+                    this.classList.toggle("active");
+                    var panel = this.nextElementSibling;
+                    if (panel.style.maxHeight) {
+                        panel.style.maxHeight = null;
+                        // panel.style.display = hidden;
+                    } else {
+                        // panel.style.display = block;
+                        panel.style.maxHeight = panel.scrollHeight + "px";
+                    }
+                });
+            }
+        </script>
+    </body>
 </html>
