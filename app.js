@@ -20,4 +20,4 @@ app.get("/", (req, res) => {
     res.sendFile(staticPath);
 });
 
-app.listen(process.env.PORT || 80);
+app.listen(process.env.PORT || 8000);
