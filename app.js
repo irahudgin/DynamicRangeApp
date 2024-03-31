@@ -7,17 +7,17 @@ const path = require("path");
 var staticPath = path.join(__dirname, "/public");
 
 app.use((req, res, next) => {
-  res.set("Cross-Origin-Embedder-Policy", "require-corp");
-  res.set("Cross-Origin-Opener-Policy", "same-origin");
-  // res.header("Cross-Origin-Resource-Policy", "cross-origin");
+    res.set("Cross-Origin-Embedder-Policy", "require-corp");
+    res.set("Cross-Origin-Opener-Policy", "same-origin");
+    // res.header("Cross-Origin-Resource-Policy", "cross-origin");
 
-  next();
+    next();
 });
 app.use(express.static(staticPath));
 app.use("/scripts", express.static(__dirname + "/node_modules/@ffmpeg/"));
 
 app.get("/", (req, res) => {
-  res.sendFile(staticPath);
+    res.sendFile(staticPath);
 });
 
-app.listen(process.env.PORT || 8000);
+app.listen(process.env.PORT || 80);
